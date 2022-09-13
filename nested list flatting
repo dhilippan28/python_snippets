@@ -1,0 +1,13 @@
+output=[]
+lis = [1,2,[3,4,5,[2,3,45],[1,2,3]],[55,66]]
+#lis=[[1,2,3],[4,5,6]]
+print('List', lis)
+
+def flat_list(i):
+    for j in i:
+        if type(j) is list:
+            flat_list(j)
+        else:
+            output.append(j)
+    return output
+print('Flat List',flat_list(lis))
